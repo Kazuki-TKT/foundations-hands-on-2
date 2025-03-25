@@ -1,0 +1,53 @@
+name: Pokemon Report
+description: File a pokemon report.
+title: "[Love]: "
+labels: ["love"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        あなたの好きなポケモンを教えてください！
+  - type: input
+    id: contact
+    attributes:
+      label: 連絡先
+      description: 連絡先を教えてください
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: input
+    id: pokemon
+    attributes:
+      label: 好きなポケモン
+      placeholder: ピカチュウ
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: どうして好きなのか?
+      description: 好きなポケモンへの愛を思う存分書いてください！
+      placeholder: どうしてそのポケモンが好きなのか教えて
+      value: "丸いお目目と鳴き声がとてもキュート！"
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: どのポケモンシリーズが好きですか？
+      options:
+        - 赤
+        - 青
+        - 緑
+      default: 0
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 行動規範
+      description: Issueを作成すると、我々の[行動規範](CODE_OF_CONDUCT.md)に同意したことになります
+      options:
+        - label: 私はこのプロジェクトの行動規範に同意します
+          required: true
